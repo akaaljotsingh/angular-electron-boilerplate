@@ -15,13 +15,7 @@ const {app, BrowserWindow} = require('electron')
         }
       })
 
-      mainWindow.loadURL(
-        url.format({
-          pathname: path.join(__dirname, `/dist/electron-testing/index.html`),
-          protocol: "file:",
-          slashes: true
-        })
-      );
+      mainWindow.loadURL(`file://${__dirname}/dist/electron-testing/index.html`);
       // Open the DevTools.
       mainWindow.webContents.openDevTools()
 
